@@ -126,6 +126,21 @@
             <p>Establishing an anonymous digital portal for reporting campus or hostel concerns safely.</p>
         </div>
             </div>
+    <div style="text-align: center; margin-top: 20px; padding: 20px; background: var(--card-bg); border-radius: 15px; width: 80%;">
+    <h3>Join the Movement</h3>
+    <p id="pledge-text">Click to pledge your support!</p>
+    <button onclick="addPledge()" id="pledge-btn" style="background: var(--primary); border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer;">
+        🙋‍♀️ I'm Voting for Shweta
+    </button>
+</div>
+
+<script>
+    function addPledge() {
+        document.getElementById("pledge-text").innerText = "Thank you for your support! ✨";
+        document.getElementById("pledge-btn").style.display = "none";
+        // You could also add a Confetti effect here!
+    }
+</script>
 
     <a href="https://wa.me/8421249290?text=Hi%20Shweta,%20I%20have%20a%20suggestion%20for%20our%20campus!" class="whatsapp-btn" target="_blank">
         💬 Contact Shweta
@@ -147,3 +162,4 @@
 </body>
 
 </html>
+
