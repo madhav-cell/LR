@@ -126,13 +126,39 @@
             <p>Establishing an anonymous digital portal for reporting campus or hostel concerns safely.</p>
         </div>
             </div>
-    <div style="text-align: center; margin-top: 20px; padding: 20px; background: var(--card-bg); border-radius: 15px; width: 80%;">
-    <h3>Join the Movement</h3>
-    <p id="pledge-text">Click to pledge your support!</p>
-    <button onclick="addPledge()" id="pledge-btn" style="background: var(--primary); border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer;">
+    <div style="text-align: center; margin-top: 30px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 2px dashed var(--primary); width: 85%; margin-left: auto; margin-right: auto;">
+    <h3 style="margin-top: 0;">🗳️ Join the Movement</h3>
+    <p id="pledge-text">Show your support! Click the button below to pledge your vote.</p>
+    
+    <button onclick="celebrateAndRedirect()" id="pledge-btn" style="background: var(--primary); color: #000; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4); transition: 0.3s;">
         🙋‍♀️ I'm Voting for Shweta
     </button>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script>
+    function celebrateAndRedirect() {
+        // 1. Fire Confetti
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#f1c40f', '#003366', '#ffffff']
+        });
+
+        // 2. Change Text
+        document.getElementById("pledge-text").innerText = "Awesome! Redirecting you to the support list... ✨";
+        document.getElementById("pledge-btn").innerText = "Success! 🎉";
+        document.getElementById("pledge-btn").style.background = "#2ecc71";
+
+        // 3. Redirect to Google Form after 2 seconds
+        // REPLACE THE LINK BELOW WITH YOUR ACTUAL GOOGLE FORM LINK
+        setTimeout(function() {
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfkjkjlDHnvG9ofeJpUkb0kjWH9XgESDl-42Di7L7I1qGDwLg/viewform?usp=publish-editor";
+        }, 2000);
+    }
+</script>
 
 <script>
     function addPledge() {
@@ -162,4 +188,5 @@
 </body>
 
 </html>
+
 
