@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote for Shweta Purvi | LR 2026</title>
+    <title>Shweta Purvi | LR Campaign 2026</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -18,7 +18,7 @@
             --card-bg: #1e1e1e;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -29,15 +29,15 @@
             padding-bottom: 100px;
         }
         .top-nav { width: 100%; display: flex; justify-content: flex-end; padding: 15px; box-sizing: border-box; }
-        .toggle-btn { background: var(--secondary); color: white; border: none; padding: 10px 18px; border-radius: 25px; cursor: pointer; font-weight: bold; }
+        .toggle-btn { background: var(--secondary); color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
         
+        .profile-container { text-align: center; margin-top: 10px; }
         .main-img { 
             width: 85%; 
             max-width: 350px; 
             border-radius: 20px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-            border: 4px solid var(--primary);
-            margin-top: 10px;
+            border: 4px solid var(--primary); 
         }
 
         header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; }
@@ -66,37 +66,40 @@
             padding: 30px; 
             background: var(--card-bg); 
             border-radius: 20px; 
-            border: 3px solid var(--primary); 
+            border: 2px dashed var(--primary); 
             width: 85%; 
             max-width: 500px; 
         }
         
         #pledge-btn {
-            background: #25D366; /* WhatsApp Green for Action */
-            color: white; 
+            background: var(--primary); 
+            color: #000; 
             border: none; 
             padding: 18px 35px; 
             border-radius: 50px; 
             font-weight: bold; 
             font-size: 1.1em;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+            transition: transform 0.2s;
         }
-        #pledge-btn:hover { transform: scale(1.05); }
+        #pledge-btn:active { transform: scale(0.95); }
 
         .whatsapp-btn { 
             position: fixed; 
             bottom: 25px; 
             right: 25px; 
-            background-color: var(--secondary); 
+            background-color: #25D366; 
             color: white; 
             padding: 15px 20px; 
             border-radius: 50px; 
             text-decoration: none; 
             font-weight: bold; 
-            z-index: 1000;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            z-index: 1000; 
         }
     </style>
 </head>
@@ -106,7 +109,9 @@
         <button class="toggle-btn" onclick="toggleTheme()">🌙 Switch Theme</button>
     </div>
 
-    <img src="shweta-poster.jpeg" alt="Shweta Purvi LR" class="main-img">
+    <div class="profile-container">
+        <img src="shweta-poster.jpeg" alt="Shweta Purvi LR" class="main-img">
+    </div>
 
     <header style="text-align: center;">
         <h1>SHWETA PURVI</h1>
@@ -115,46 +120,56 @@
     </header>
 
     <div class="manifesto-grid">
-        <div class="pillar-card"><h3>🧼 Hygiene</h3><p>24/7 sanitary napkin availability and clean facilities.</p></div>
-        <div class="pillar-card"><h3>🛡️ Safety</h3><p>Anonymous portal for reporting campus & hostel concerns.</p></div>
-        <div class="pillar-card"><h3>💻 Growth</h3><p>Tech workshops & leadership sessions for girls.</p></div>
+        <div class="pillar-card">
+            <span style="font-size: 2em;">🧼</span>
+            <h3>Hygiene & Health</h3>
+            <p>Ensuring 24/7 sanitary napkin availability and high-standard washroom cleanliness.</p>
+        </div>
+        <div class="pillar-card">
+            <span style="font-size: 2em;">🛡️</span>
+            <h3>Safety & Trust</h3>
+            <p>Establishing an anonymous digital portal for reporting campus concerns safely.</p>
+        </div>
+        <div class="pillar-card">
+            <span style="font-size: 2em;">💻</span>
+            <h3>Skills & Growth</h3>
+            <p>Organizing IT workshops and leadership sessions specifically for girls in engineering.</p>
+        </div>
     </div>
 
     <div class="pledge-box">
-        <h3>📢 Pledge Your Support</h3>
-        <p id="pledge-text">Click below to celebrate and let Shweta know you're with her!</p>
-        <button onclick="celebrateAndPledge()" id="pledge-btn">
+        <h3>🗳️ Join the Movement</h3>
+        <p id="pledge-text">Show your support! Click below to pledge your vote for progress.</p>
+        <button onclick="celebrateAndRedirect()" id="pledge-btn">
             🙋‍♀️ I'm Voting for Shweta
         </button>
     </div>
 
-    <a href="https://wa.me/918421249290" class="whatsapp-btn" target="_blank">
-        💬 Message Shweta
+    <a href="https://wa.me/918421249290?text=Hi%20Shweta,%20I%20visited%20your%20campaign%20site!%20I%20have%20a%20suggestion..." class="whatsapp-btn" target="_blank">
+        <span>💬 Contact Shweta</span>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     
     <script>
-        function celebrateAndPledge() {
-            // 1. Confetti
+        function celebrateAndRedirect() {
+            // Confetti Blast
             confetti({
                 particleCount: 150,
                 spread: 70,
                 origin: { y: 0.6 },
-                colors: ['#f1c40f', '#003366', '#25D366']
+                colors: ['#f1c40f', '#003366', '#ffffff']
             });
 
             const text = document.getElementById("pledge-text");
             const btn = document.getElementById("pledge-btn");
 
-            text.innerText = "Redirecting to WhatsApp to say hi to Shweta... ✨";
-            btn.innerText = "Celebration Started! 🎉";
-            btn.style.background = "#3498db";
+            text.innerText = "Awesome! Redirecting you to the support list... ✨";
+            btn.innerText = "Success! 🎉";
+            btn.style.background = "#2ecc71";
             
-            // 2. Redirect to WhatsApp after celebration
             setTimeout(function() {
-                const message = encodeURIComponent("Hi Shweta! I just visited your campaign website. I'm supporting you for LR! 🙋‍♀️✨");
-                window.location.href = "https://wa.me/918421249290?text=" + message;
+                window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfkjkjlDHnvG9ofeJpUkb0kjWH9XgESDl-42Di7L7I1qGDwLg/viewform";
             }, 2000);
         }
 
