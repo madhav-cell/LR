@@ -8,8 +8,8 @@
         :root {
             --bg: #ffffff;
             --text: #1a2a40;
-            --primary: #f1c40f; /* Campaign Gold/Yellow */
-            --secondary: #003366; /* Formal Navy */
+            --primary: #f1c40f; 
+            --secondary: #003366; 
             --card-bg: #f9f9f9;
         }
         [data-theme="dark"] {
@@ -18,7 +18,7 @@
             --card-bg: #1e1e1e;
         }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -26,78 +26,18 @@
             flex-direction: column;
             align-items: center;
             transition: 0.3s;
-            padding-bottom: 50px;
+            padding-bottom: 80px;
         }
-        /* Theme Toggle */
-        .top-nav {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-        .toggle-btn {
-            background: var(--secondary);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9em;
-        }
-
-        /* Profile Image Section */
-        .profile-container {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .main-img {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            border: 4px solid var(--primary);
-        }
-
+        .top-nav { width: 100%; display: flex; justify-content: flex-end; padding: 15px; box-sizing: border-box; }
+        .toggle-btn { background: var(--secondary); color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+        .profile-container { text-align: center; margin-top: 10px; }
+        .main-img { width: 90%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 4px solid var(--primary); }
         header h1 { margin: 15px 0 5px 0; color: var(--secondary); }
         [data-theme="dark"] header h1 { color: var(--primary); }
-        
-        /* Interactive Cards */
-        .manifesto-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            width: 90%;
-            max-width: 800px;
-            margin-top: 30px;
-        }
-        .pillar-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-        }
-        .whatsapp-btn:hover { transform: scale(1.05); }
-
+        .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 800px; margin-top: 30px; }
+        .pillar-card { background: var(--card-bg); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; z-index: 1000; }
+        .pledge-box { text-align: center; margin-top: 30px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 2px dashed var(--primary); width: 85%; max-width: 600px; }
     </style>
 </head>
 <body>
@@ -125,58 +65,38 @@
             <h3>🛡️ Safety & Trust</h3>
             <p>Establishing an anonymous digital portal for reporting campus or hostel concerns safely.</p>
         </div>
-            </div>
-    <div style="text-align: center; margin-top: 30px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 2px dashed var(--primary); width: 85%; margin-left: auto; margin-right: auto;">
-    <h3 style="margin-top: 0;">🗳️ Join the Movement</h3>
-    <p id="pledge-text">Show your support! Click the button below to pledge your vote.</p>
-    
-    <button onclick="celebrateAndRedirect()" id="pledge-btn" style="background: var(--primary); color: #000; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; font-size: 1.1em; cursor: pointer; box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4); transition: 0.3s;">
-        🙋‍♀️ I'm Voting for Shweta
-    </button>
-</div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <div class="pledge-box">
+        <h3>🗳️ Join the Movement</h3>
+        <p id="pledge-text">Show your support! Click the button below to pledge your vote.</p>
+        <button onclick="celebrateAndRedirect()" id="pledge-btn" style="background: var(--primary); color: #000; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; cursor: pointer;">
+            🙋‍♀️ I'm Voting for Shweta
+        </button>
+    </div>
 
-<script>
-    function celebrateAndRedirect() {
-        // 1. Fire Confetti
-        confetti({
-            particleCount: 150,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ['#f1c40f', '#003366', '#ffffff']
-        });
-
-        // 2. Change Text
-        document.getElementById("pledge-text").innerText = "Awesome! Redirecting you to the support list... ✨";
-        document.getElementById("pledge-btn").innerText = "Success! 🎉";
-        document.getElementById("pledge-btn").style.background = "#2ecc71";
-
-        // 3. Redirect to Google Form after 2 seconds
-        // REPLACE THE LINK BELOW WITH YOUR ACTUAL GOOGLE FORM LINK
-        setTimeout(function() {
-            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfkjkjlDHnvG9ofeJpUkb0kjWH9XgESDl-42Di7L7I1qGDwLg/viewform?usp=publish-editor";
-        }, 2000);
-    }
-</script>
-
-<script>
-    function addPledge() {
-        document.getElementById("pledge-text").innerText = "Thank you for your support! ✨";
-        document.getElementById("pledge-btn").style.display = "none";
-        // You could also add a Confetti effect here!
-    }
-</script>
-
-    <a href="https://wa.me/8421249290?text=Hi%20Shweta,%20I%20have%20a%20suggestion%20for%20our%20campus!" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/918421249290?text=Hi%20Shweta,%20I%20saw%20your%20website!%20I%20have%20a%20suggestion..." class="whatsapp-btn" target="_blank">
         💬 Contact Shweta
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
+        function celebrateAndRedirect() {
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#f1c40f', '#003366', '#ffffff'] });
+            document.getElementById("pledge-text").innerText = "Awesome! Redirecting you to the support list... ✨";
+            const btn = document.getElementById("pledge-btn");
+            btn.innerText = "Success! 🎉";
+            btn.style.background = "#2ecc71";
+            
+            setTimeout(function() {
+                // Using the clean form link
+                window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfkjkjlDHnvG9ofeJpUkb0kjWH9XgESDl-42Di7L7I1qGDwLg/viewform";
+            }, 2000);
+        }
+
         function toggleTheme() {
             const body = document.body;
-            const current = body.getAttribute("data-theme");
-            if (current === "dark") {
+            if (body.getAttribute("data-theme") === "dark") {
                 body.removeAttribute("data-theme");
                 document.querySelector(".toggle-btn").innerText = "🌙 Switch Theme";
             } else {
@@ -186,7 +106,4 @@
         }
     </script>
 </body>
-
 </html>
-
-
