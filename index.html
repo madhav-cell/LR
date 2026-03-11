@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shweta Purvi | LR Campaign 2026</title>
+    <title>Shweta Purvi | LR 2026</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -11,6 +11,7 @@
             --primary: #f1c40f; 
             --secondary: #003366; 
             --card-bg: #f9f9f9;
+            --sos: #e74c3c;
         }
         [data-theme="dark"] {
             --bg: #121212;
@@ -18,7 +19,7 @@
             --card-bg: #1e1e1e;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -31,83 +32,41 @@
         .top-nav { width: 100%; display: flex; justify-content: flex-end; padding: 15px; box-sizing: border-box; }
         .toggle-btn { background: var(--secondary); color: white; border: none; padding: 10px 18px; border-radius: 25px; cursor: pointer; font-weight: bold; }
         
-        .main-img { 
-            width: 85%; 
-            max-width: 350px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-            border: 4px solid var(--primary);
-            margin-top: 10px;
-        }
+        .main-img { width: 85%; max-width: 350px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 4px solid var(--primary); margin-top: 10px; }
 
         header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; text-align: center; }
         [data-theme="dark"] header h1 { color: var(--primary); }
         
-        .manifesto-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 15px; 
-            width: 90%; 
-            max-width: 1000px; 
-            margin-top: 25px; 
-        }
+        .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px; width: 90%; max-width: 1000px; margin-top: 25px; }
+        
         .pillar-card { 
             background: var(--card-bg); 
             padding: 20px; 
             border-radius: 15px; 
             border-left: 5px solid var(--primary); 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .pillar-card h3 { margin-top: 0; color: var(--secondary); }
-        [data-theme="dark"] .pillar-card h3 { color: var(--primary); }
 
-        .pledge-box { 
-            text-align: center; 
-            margin-top: 40px; 
-            padding: 30px; 
-            background: var(--card-bg); 
+        .hostel-actions { display: flex; gap: 10px; margin-top: 12px; }
+        .btn-sm { 
+            padding: 8px 15px; 
             border-radius: 20px; 
-            border: 3px solid var(--primary); 
-            width: 85%; 
-            max-width: 500px; 
-        }
-        
-        #pledge-btn {
-            background: #25D366; 
-            color: white; 
-            border: none; 
-            padding: 18px 35px; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            font-size: 1.1em;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
-        }
-
-        .closing-line {
-            margin-top: 40px;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: var(--secondary);
-            max-width: 80%;
-        }
-        [data-theme="dark"] .closing-line { color: var(--primary); }
-
-        .whatsapp-btn { 
-            position: fixed; 
-            bottom: 25px; 
-            right: 25px; 
-            background-color: var(--secondary); 
-            color: white; 
-            padding: 15px 20px; 
-            border-radius: 50px; 
             text-decoration: none; 
+            font-size: 0.85em; 
             font-weight: bold; 
-            z-index: 1000;
+            text-align: center;
+            flex: 1;
         }
+        .btn-wa { background: #25D366; color: white; }
+        .btn-sos { background: var(--sos); color: white; }
+
+        .pledge-box { text-align: center; margin-top: 40px; padding: 30px; background: var(--card-bg); border-radius: 20px; border: 3px solid var(--primary); width: 85%; max-width: 500px; }
+        #pledge-btn { background: #25D366; color: white; border: none; padding: 18px 35px; border-radius: 50px; font-weight: bold; font-size: 1.1em; cursor: pointer; }
+
+        .whatsapp-btn { position: fixed; bottom: 25px; right: 25px; background-color: var(--secondary); color: white; padding: 15px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -120,84 +79,81 @@
 
     <header>
         <h1>SHWETA PURVI</h1>
-        <p style="font-size: 1.2em; margin: 0; text-align: center;">Ladies Representative Candidate | IT Dept</p>
+        <p style="text-align: center; margin: 0;">Ladies Representative Candidate | IT Dept</p>
     </header>
 
     <div class="manifesto-grid">
         <div class="pillar-card">
             <h3>🚍 1. Safe Travel Support</h3>
-            <p>Ensuring secure travel arrangements during gathering nights or late events for a safe commute.</p>
+            <p>Reliable travel arrangements for late events ensuring safe commutes for girls.</p>
         </div>
-        <div class="pillar-card">
+
+        <div class="pillar-card" style="border-left-color: #25D366;">
             <h3>👭 2. Hostellers Network</h3>
-            <p>A dedicated support group for outside hostellers for updates, emergencies, and assistance.</p>
+            <p>Dedicated connection for outside hostellers for emergencies and updates.</p>
+            <div class="hostel-actions">
+                <a href="https://wa.me/918421249290?text=I%20want%20to%20join%20the%20Hosteller%20Network" class="btn-sm btn-wa">Join Network</a>
+                <a href="https://wa.me/918421249290?text=EMERGENCY%3A%20I%20need%20assistance%20immediately" class="btn-sm btn-sos">SOS Alert</a>
+            </div>
         </div>
+
         <div class="pillar-card">
             <h3>🏠 3. Hostel Resolution</h3>
-            <p>Direct coordination with authorities to solve food, water, and maintenance issues in hostels.</p>
+            <p>Solving food, water, and maintenance issues by coordinating with authorities.</p>
         </div>
+
         <div class="pillar-card">
-            <h3>🎤 4. Jhankar Opportunities</h3>
-            <p>Providing platforms for students to lead as Event Coordinators in MGM's Jhankar events.</p>
+            <h3>🎤 4. Jhankar Events</h3>
+            <p>Opportunities for students to lead as Event Coordinators in Jhankar events.</p>
         </div>
+
         <div class="pillar-card">
             <h3>🩺 5. Hygiene & Health</h3>
-            <p>24/7 sanitary napkin availability and maintaining high standards of washroom cleanliness.</p>
+            <p>24/7 sanitary napkin availability and high-standard washroom cleanliness.</p>
         </div>
+
         <div class="pillar-card">
             <h3>🛡️ 6. Safety & Trust</h3>
-            <p>An anonymous digital portal to safely report any campus or hostel concerns without hesitation.</p>
+            <p>Anonymous portal to safely report campus or hostel concerns without hesitation.</p>
         </div>
+
         <div class="pillar-card">
-            <h3>🤝 7. Support System</h3>
-            <p>Acting as a strong voice for girls on and off campus to ensure every concern is resolved properly.</p>
+            <h3>🤝 7. Issues Resolution</h3>
+            <p>Strong support for girls on and off campus ensuring concerns are properly resolved.</p>
         </div>
     </div>
 
-    <div class="closing-line">
+    <div style="padding: 20px; text-align: center; font-weight: bold; font-size: 1.1em; color: var(--secondary);">
         “A strong voice for girls, better opportunities for students, and a safer, supportive campus.” 💪🌸
     </div>
 
     <div class="pledge-box">
         <h3>📢 Pledge Your Support</h3>
         <p id="pledge-text">Click below to celebrate and let Shweta know you're with her!</p>
-        <button onclick="celebrateAndPledge()" id="pledge-btn">
-            🙋‍♀️ I'm Voting for Shweta
-        </button>
+        <button onclick="celebrateAndPledge()" id="pledge-btn">🙋‍♀️ I'm Voting for Shweta</button>
     </div>
 
-    <a href="https://wa.me/918421249290" class="whatsapp-btn" target="_blank">
-        💬 Message Shweta
-    </a>
+    <a href="https://wa.me/918421249290" class="whatsapp-btn">💬 Message Shweta</a>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    
     <script>
         function celebrateAndPledge() {
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 },
-                colors: ['#f1c40f', '#003366', '#25D366']
-            });
-
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#f1c40f', '#003366', '#25D366'] });
             document.getElementById("pledge-text").innerText = "Opening WhatsApp to confirm your pledge... ✨";
-            
             setTimeout(function() {
-                const message = encodeURIComponent("Hi Shweta! I visited your website and I'm pledging my support for you as LR! 🙋‍♀️✨");
-                window.location.href = "https://wa.me/918421249290?text=" + message;
+                const msg = encodeURIComponent("Hi Shweta! I visited your website and I'm pledging my support for you as LR! 🙋‍♀️✨");
+                window.location.href = "https://wa.me/918421249290?text=" + msg;
             }, 1800);
         }
-
         function toggleTheme() {
-            const body = document.body;
-            const btn = document.querySelector(".toggle-btn");
-            if (body.getAttribute("data-theme") === "dark") {
-                body.removeAttribute("data-theme");
-                btn.innerText = "🌙 Switch Theme";
+            const b = document.body;
+            const t = document.querySelector(".toggle-btn");
+            if (b.getAttribute("data-theme") === "dark") {
+                b.removeAttribute("data-theme");
+                t.innerText = "🌙 Switch Theme";
             } else {
-                body.setAttribute("data-theme", "dark");
-                btn.innerText = "☀️ Switch Theme";
+                b.setAttribute("data-theme", "dark");
+                t.innerText = "☀️ Switch Theme";
             }
         }
     </script>
