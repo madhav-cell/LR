@@ -18,7 +18,7 @@
             --card-bg: #1e1e1e;
         }
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -26,18 +26,81 @@
             flex-direction: column;
             align-items: center;
             transition: 0.3s;
-            padding-bottom: 80px;
+            padding-bottom: 100px;
         }
         .top-nav { width: 100%; display: flex; justify-content: flex-end; padding: 15px; box-sizing: border-box; }
-        .toggle-btn { background: var(--secondary); color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+        .toggle-btn { background: var(--secondary); color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        
         .profile-container { text-align: center; margin-top: 10px; }
-        .main-img { width: 90%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 4px solid var(--primary); }
-        header h1 { margin: 15px 0 5px 0; color: var(--secondary); }
+        .main-img { 
+            width: 85%; 
+            max-width: 350px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+            border: 4px solid var(--primary); 
+        }
+
+        header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; }
         [data-theme="dark"] header h1 { color: var(--primary); }
-        .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 800px; margin-top: 30px; }
-        .pillar-card { background: var(--card-bg); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; z-index: 1000; }
-        .pledge-box { text-align: center; margin-top: 30px; padding: 25px; background: var(--card-bg); border-radius: 15px; border: 2px dashed var(--primary); width: 85%; max-width: 600px; }
+        
+        .manifesto-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 15px; 
+            width: 90%; 
+            max-width: 900px; 
+            margin-top: 25px; 
+        }
+        .pillar-card { 
+            background: var(--card-bg); 
+            padding: 20px; 
+            border-radius: 15px; 
+            border-top: 5px solid var(--primary); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .pledge-box { 
+            text-align: center; 
+            margin-top: 40px; 
+            padding: 30px; 
+            background: var(--card-bg); 
+            border-radius: 20px; 
+            border: 2px dashed var(--primary); 
+            width: 85%; 
+            max-width: 500px; 
+        }
+        
+        #pledge-btn {
+            background: var(--primary); 
+            color: #000; 
+            border: none; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+            transition: transform 0.2s;
+        }
+        #pledge-btn:active { transform: scale(0.95); }
+
+        .whatsapp-btn { 
+            position: fixed; 
+            bottom: 25px; 
+            right: 25px; 
+            background-color: #25D366; 
+            color: white; 
+            padding: 15px 20px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            z-index: 1000; 
+        }
     </style>
 </head>
 <body>
@@ -52,56 +115,73 @@
 
     <header style="text-align: center;">
         <h1>SHWETA PURVI</h1>
-        <p>Ladies Representative Candidate | IT Dept</p>
-        <p><i>"No one is fitter, than Shweta to deliver."</i></p>
+        <p style="font-size: 1.2em; margin: 0;">Ladies Representative Candidate | IT Dept</p>
+        <p style="color: var(--primary); font-weight: bold; margin-top: 10px;"><i>"No one is fitter, than Shweta to deliver."</i></p>
     </header>
 
     <div class="manifesto-grid">
         <div class="pillar-card">
-            <h3>🩺 Hygiene & Health</h3>
+            <span style="font-size: 2em;">🧼</span>
+            <h3>Hygiene & Health</h3>
             <p>Ensuring 24/7 sanitary napkin availability and high-standard washroom cleanliness.</p>
         </div>
         <div class="pillar-card">
-            <h3>🛡️ Safety & Trust</h3>
-            <p>Establishing an anonymous digital portal for reporting campus or hostel concerns safely.</p>
+            <span style="font-size: 2em;">🛡️</span>
+            <h3>Safety & Trust</h3>
+            <p>Establishing an anonymous digital portal for reporting campus concerns safely.</p>
+        </div>
+        <div class="pillar-card">
+            <span style="font-size: 2em;">💻</span>
+            <h3>Skills & Growth</h3>
+            <p>Organizing IT workshops and leadership sessions specifically for girls in engineering.</p>
         </div>
     </div>
 
     <div class="pledge-box">
         <h3>🗳️ Join the Movement</h3>
-        <p id="pledge-text">Show your support! Click the button below to pledge your vote.</p>
-        <button onclick="celebrateAndRedirect()" id="pledge-btn" style="background: var(--primary); color: #000; border: none; padding: 15px 30px; border-radius: 30px; font-weight: bold; cursor: pointer;">
+        <p id="pledge-text">Show your support! Click below to pledge your vote for progress.</p>
+        <button onclick="celebrateAndRedirect()" id="pledge-btn">
             🙋‍♀️ I'm Voting for Shweta
         </button>
     </div>
 
-    <a href="https://wa.me/918421249290?text=Hi%20Shweta,%20I%20saw%20your%20website!%20I%20have%20a%20suggestion..." class="whatsapp-btn" target="_blank">
-        💬 Contact Shweta
+    <a href="https://wa.me/918421249290?text=Hi%20Shweta,%20I%20visited%20your%20campaign%20site!%20I%20have%20a%20suggestion..." class="whatsapp-btn" target="_blank">
+        <span>💬 Contact Shweta</span>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    
     <script>
         function celebrateAndRedirect() {
-            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#f1c40f', '#003366', '#ffffff'] });
-            document.getElementById("pledge-text").innerText = "Awesome! Redirecting you to the support list... ✨";
+            // Confetti Blast
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#f1c40f', '#003366', '#ffffff']
+            });
+
+            const text = document.getElementById("pledge-text");
             const btn = document.getElementById("pledge-btn");
+
+            text.innerText = "Awesome! Redirecting you to the support list... ✨";
             btn.innerText = "Success! 🎉";
             btn.style.background = "#2ecc71";
             
             setTimeout(function() {
-                // Using the clean form link
                 window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfkjkjlDHnvG9ofeJpUkb0kjWH9XgESDl-42Di7L7I1qGDwLg/viewform";
             }, 2000);
         }
 
         function toggleTheme() {
             const body = document.body;
+            const btn = document.querySelector(".toggle-btn");
             if (body.getAttribute("data-theme") === "dark") {
                 body.removeAttribute("data-theme");
-                document.querySelector(".toggle-btn").innerText = "🌙 Switch Theme";
+                btn.innerText = "🌙 Switch Theme";
             } else {
                 body.setAttribute("data-theme", "dark");
-                document.querySelector(".toggle-btn").innerText = "☀️ Switch Theme";
+                btn.innerText = "☀️ Switch Theme";
             }
         }
     </script>
