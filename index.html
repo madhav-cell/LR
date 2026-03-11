@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shweta Purvi | LR 2026</title>
+    <title>Shweta Purvi | LR Campaign 2026</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -12,6 +12,8 @@
             --secondary: #003366; 
             --card-bg: #f9f9f9;
             --sos: #e74c3c;
+            --action: #3498db;
+            --safe: #9b59b6;
         }
         [data-theme="dark"] {
             --bg: #121212;
@@ -37,7 +39,7 @@
         header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; text-align: center; }
         [data-theme="dark"] header h1 { color: var(--primary); }
         
-        .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px; width: 90%; max-width: 1000px; margin-top: 25px; }
+        .manifesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px; width: 95%; max-width: 1100px; margin-top: 25px; }
         
         .pillar-card { 
             background: var(--card-bg); 
@@ -50,10 +52,10 @@
             justify-content: space-between;
         }
 
-        .hostel-actions { display: flex; gap: 10px; margin-top: 12px; }
+        .action-btns { display: flex; gap: 8px; margin-top: 15px; flex-wrap: wrap; }
         .btn-sm { 
-            padding: 8px 15px; 
-            border-radius: 20px; 
+            padding: 10px 14px; 
+            border-radius: 15px; 
             text-decoration: none; 
             font-size: 0.85em; 
             font-weight: bold; 
@@ -61,10 +63,12 @@
             flex: 1;
         }
         .btn-wa { background: #25D366; color: white; }
+        .btn-blue { background: var(--action); color: white; }
         .btn-sos { background: var(--sos); color: white; }
+        .btn-dark { background: var(--secondary); color: white; }
 
         .pledge-box { text-align: center; margin-top: 40px; padding: 30px; background: var(--card-bg); border-radius: 20px; border: 3px solid var(--primary); width: 85%; max-width: 500px; }
-        #pledge-btn { background: #25D366; color: white; border: none; padding: 18px 35px; border-radius: 50px; font-weight: bold; font-size: 1.1em; cursor: pointer; }
+        #pledge-btn { background: #25D366; color: white; border: none; padding: 18px 35px; border-radius: 50px; font-weight: bold; font-size: 1.1em; cursor: pointer; box-shadow: 0 5px 15px rgba(37,211,102,0.3); }
 
         .whatsapp-btn { position: fixed; bottom: 25px; right: 25px; background-color: var(--secondary); color: white; padding: 15px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
@@ -79,32 +83,38 @@
 
     <header>
         <h1>SHWETA PURVI</h1>
-        <p style="text-align: center; margin: 0;">Ladies Representative Candidate | IT Dept</p>
+        <p style="text-align: center; margin: 0; font-weight: 500;">Ladies Representative Candidate | IT Dept</p>
     </header>
 
     <div class="manifesto-grid">
         <div class="pillar-card">
             <h3>🚍 1. Safe Travel Support</h3>
-            <p>Reliable travel arrangements for late events ensuring safe commutes for girls.</p>
+            <p>Ensuring secure travel arrangements during late events so girls can commute comfortably.</p>
         </div>
 
         <div class="pillar-card" style="border-left-color: #25D366;">
             <h3>👭 2. Hostellers Network</h3>
-            <p>Dedicated connection for outside hostellers for emergencies and updates.</p>
-            <div class="hostel-actions">
-                <a href="https://wa.me/918421249290?text=I%20want%20to%20join%20the%20Hosteller%20Network" class="btn-sm btn-wa">Join Network</a>
-                <a href="https://wa.me/918421249290?text=EMERGENCY%3A%20I%20need%20assistance%20immediately" class="btn-sm btn-sos">SOS Alert</a>
+            <p>Support group for outside hostellers for updates, emergencies, and assistance.</p>
+            <div class="action-btns">
+                <a href="https://wa.me/918421249290?text=I%20want%20to%20join%20the%20Hosteller%20Network" class="btn-sm btn-wa">Join Group</a>
+                <a href="https://wa.me/918421249290?text=EMERGENCY%3A%20Need%20Assistance" class="btn-sm btn-sos">SOS Alert</a>
             </div>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card" style="border-left-color: var(--action);">
             <h3>🏠 3. Hostel Resolution</h3>
             <p>Solving food, water, and maintenance issues by coordinating with authorities.</p>
+            <div class="action-btns">
+                <a href="https://wa.me/918421249290?text=Reporting%20Hostel%20Issue" class="btn-sm btn-blue">Report Issue</a>
+            </div>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card" style="border-left-color: var(--safe);">
             <h3>🎤 4. Jhankar Events</h3>
-            <p>Opportunities for students to lead as Event Coordinators in Jhankar events.</p>
+            <p>Opportunities for girls to lead as Coordinators and contributors in Jhankar events.</p>
+            <div class="action-btns">
+                <a href="https://wa.me/918421249290?text=Interested%20in%20Jhankar%20Coordination" class="btn-sm btn-wa">I'm Interested</a>
+            </div>
         </div>
 
         <div class="pillar-card">
@@ -112,18 +122,21 @@
             <p>24/7 sanitary napkin availability and high-standard washroom cleanliness.</p>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card" style="border-left-color: #34495e;">
             <h3>🛡️ 6. Safety & Trust</h3>
-            <p>Anonymous portal to safely report campus or hostel concerns without hesitation.</p>
+            <p>Introducing an anonymous digital portal to safely report concerns without hesitation.</p>
+            <div class="action-btns">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSexvOVZV1u8OsQSHvf0lkueuRNXj_ShxsLQH1PSdXOVVgU8Zg/viewform?usp=publish-editor" class="btn-sm btn-dark">Report Anonymously 🔒</a>
+            </div>
         </div>
 
         <div class="pillar-card">
             <h3>🤝 7. Issues Resolution</h3>
-            <p>Strong support for girls on and off campus ensuring concerns are properly resolved.</p>
+            <p>A strong support system for girls on and off campus ensuring concerns are resolved.</p>
         </div>
     </div>
 
-    <div style="padding: 20px; text-align: center; font-weight: bold; font-size: 1.1em; color: var(--secondary);">
+    <div style="padding: 40px 20px; text-align: center; font-weight: bold; font-size: 1.2em; color: var(--secondary); line-height: 1.5;">
         “A strong voice for girls, better opportunities for students, and a safer, supportive campus.” 💪🌸
     </div>
 
@@ -133,13 +146,13 @@
         <button onclick="celebrateAndPledge()" id="pledge-btn">🙋‍♀️ I'm Voting for Shweta</button>
     </div>
 
-    <a href="https://wa.me/918421249290" class="whatsapp-btn">💬 Message Shweta</a>
+    <a href="https://wa.me/918421249290" class="whatsapp-btn">💬 Contact Shweta</a>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
         function celebrateAndPledge() {
             confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 }, colors: ['#f1c40f', '#003366', '#25D366'] });
-            document.getElementById("pledge-text").innerText = "Opening WhatsApp to confirm your pledge... ✨";
+            document.getElementById("pledge-text").innerText = "Redirecting to WhatsApp to confirm your support... ✨";
             setTimeout(function() {
                 const msg = encodeURIComponent("Hi Shweta! I visited your website and I'm pledging my support for you as LR! 🙋‍♀️✨");
                 window.location.href = "https://wa.me/918421249290?text=" + msg;
