@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vote for Shweta Purvi | LR 2026</title>
+    <title>Shweta Purvi | LR Campaign 2026</title>
     <style>
         :root {
             --bg: #ffffff;
@@ -40,25 +40,26 @@
             margin-top: 10px;
         }
 
-        header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; }
+        header h1 { margin: 20px 0 5px 0; color: var(--secondary); font-size: 2.2em; text-align: center; }
         [data-theme="dark"] header h1 { color: var(--primary); }
         
         .manifesto-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 15px; 
             width: 90%; 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin-top: 25px; 
         }
         .pillar-card { 
             background: var(--card-bg); 
             padding: 20px; 
             border-radius: 15px; 
-            border-top: 5px solid var(--primary); 
+            border-left: 5px solid var(--primary); 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            text-align: center;
         }
+        .pillar-card h3 { margin-top: 0; color: var(--secondary); }
+        [data-theme="dark"] .pillar-card h3 { color: var(--primary); }
 
         .pledge-box { 
             text-align: center; 
@@ -72,7 +73,7 @@
         }
         
         #pledge-btn {
-            background: #25D366; /* WhatsApp Green for Action */
+            background: #25D366; 
             color: white; 
             border: none; 
             padding: 18px 35px; 
@@ -83,7 +84,17 @@
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
             transition: 0.3s;
         }
-        #pledge-btn:hover { transform: scale(1.05); }
+
+        .closing-line {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--secondary);
+            max-width: 80%;
+        }
+        [data-theme="dark"] .closing-line { color: var(--primary); }
 
         .whatsapp-btn { 
             position: fixed; 
@@ -96,7 +107,6 @@
             text-decoration: none; 
             font-weight: bold; 
             z-index: 1000;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -108,16 +118,44 @@
 
     <img src="shweta-poster.jpeg" alt="Shweta Purvi LR" class="main-img">
 
-    <header style="text-align: center;">
+    <header>
         <h1>SHWETA PURVI</h1>
-        <p style="font-size: 1.2em; margin: 0;">Ladies Representative Candidate | IT Dept</p>
-        <p style="color: var(--primary); font-weight: bold; margin-top: 10px;"><i>"No one is fitter, than Shweta to deliver."</i></p>
+        <p style="font-size: 1.2em; margin: 0; text-align: center;">Ladies Representative Candidate | IT Dept</p>
     </header>
 
     <div class="manifesto-grid">
-        <div class="pillar-card"><h3>🧼 Hygiene</h3><p>24/7 sanitary napkin availability and clean facilities.</p></div>
-        <div class="pillar-card"><h3>🛡️ Safety</h3><p>Anonymous portal for reporting campus & hostel concerns.</p></div>
-        <div class="pillar-card"><h3>💻 Growth</h3><p>Tech workshops & leadership sessions for girls.</p></div>
+        <div class="pillar-card">
+            <h3>🚍 1. Safe Travel Support</h3>
+            <p>Ensuring secure travel arrangements during gathering nights or late events for a safe commute.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>👭 2. Hostellers Network</h3>
+            <p>A dedicated support group for outside hostellers for updates, emergencies, and assistance.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>🏠 3. Hostel Resolution</h3>
+            <p>Direct coordination with authorities to solve food, water, and maintenance issues in hostels.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>🎤 4. Jhankar Opportunities</h3>
+            <p>Providing platforms for students to lead as Event Coordinators in MGM's Jhankar events.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>🩺 5. Hygiene & Health</h3>
+            <p>24/7 sanitary napkin availability and maintaining high standards of washroom cleanliness.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>🛡️ 6. Safety & Trust</h3>
+            <p>An anonymous digital portal to safely report any campus or hostel concerns without hesitation.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>🤝 7. Support System</h3>
+            <p>Acting as a strong voice for girls on and off campus to ensure every concern is resolved properly.</p>
+        </div>
+    </div>
+
+    <div class="closing-line">
+        “A strong voice for girls, better opportunities for students, and a safer, supportive campus.” 💪🌸
     </div>
 
     <div class="pledge-box">
@@ -136,7 +174,6 @@
     
     <script>
         function celebrateAndPledge() {
-            // 1. Confetti
             confetti({
                 particleCount: 150,
                 spread: 70,
@@ -144,18 +181,12 @@
                 colors: ['#f1c40f', '#003366', '#25D366']
             });
 
-            const text = document.getElementById("pledge-text");
-            const btn = document.getElementById("pledge-btn");
-
-            text.innerText = "Redirecting to WhatsApp to say hi to Shweta... ✨";
-            btn.innerText = "Celebration Started! 🎉";
-            btn.style.background = "#3498db";
+            document.getElementById("pledge-text").innerText = "Opening WhatsApp to confirm your pledge... ✨";
             
-            // 2. Redirect to WhatsApp after celebration
             setTimeout(function() {
-                const message = encodeURIComponent("Hi Shweta! I just visited your campaign website. I'm supporting you for LR! 🙋‍♀️✨");
+                const message = encodeURIComponent("Hi Shweta! I visited your website and I'm pledging my support for you as LR! 🙋‍♀️✨");
                 window.location.href = "https://wa.me/918421249290?text=" + message;
-            }, 2000);
+            }, 1800);
         }
 
         function toggleTheme() {
